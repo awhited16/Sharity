@@ -1,9 +1,9 @@
 import React from "react";
 
-function VPickUps() {
+function donations() {
     return (
         <div></div>
     );
 }
 
-export default VPickUps;
+export default donations;
