@@ -4,56 +4,98 @@
 CREATE  SHARITY;
 
 
+--use database to create tables
 
---create vendor table--
-
-CREATE TABLE Vendor(
-	
-	#Make guid column for vendor
-    ID int Not Null,
-  -- Makes a string column called "businessname" which cannot contain null --
-	BUSINESSNAME varchar(100) NOT NULL,
-
-    EIN int Not Null
-
-);
-
-
---add vendor location--
-
+--Users table--
 USE sharity;
-CREATE TABLE  VendorLocation(
 
-VENDORID INT NOT NULL,
-
-STREET VARCHAR(100),
-
-CITY VARCHAR(100),
-
-STATE VARCHAR(2),
-
-ZIP VARCHAR(10),
-
-COUNTRY VARCHAR(30)
-
+CREATE TABLE USERS (
+  userId INT NOT NULL AUTO_INCREMENT,
+  firstName VARCHAR(50)NOT NULL,
+  lastname  VARCHAR(50) NOT NULL,
+  title VARCHAR(50)NOT NULL,
+  email VARCHAR(50)NOT NULL,
+  phone INT(20)NOT NULL,
+  PRIMARY KEY (userId)
 );
 
---I added some  dummy data--
+vendor table
+USE sharity;
 
-INSERT INTO VENDOR (ID, BUSINESSNAME, URL, EIN) VALUES (1, 'LOCAL ROOTS', 'LOCALROOTS.COM', '1234567890');
+CREATE TABLE vendor (
+  userId INT NOT NULL,
+  businessName VARCHAR(100)NOT NULL,
+  URL  VARCHAR(100),
+  EIN  VARCHAR(20) NOT NULL,
+  email VARCHAR(50)NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  businessType VARCHAR(50)NOT NULL,
+storageReqs VARCHAR(50) NOT NULL
+);
 
-SELECT * FROM VENDOR;
 
-INSERT INTO VENDORLOCATION (VENDORID, STREETADDRESS, CITY, STATE, ZIP, COUNTRY) VALUES (1, '140 NORTH WALNUT STREET', 'WOOSTER', 'OH', '44691', 'UNITED STATES');
+--address table--
+USE sharity;
+
+CREATE TABLE LocationAddress (
+	userId INT NOT NULL,
+	streetAddress VARCHAR(100) NOT NULL,
+	City VARCHAR(50) NOT NULL,
+	State VARCHAR(2) NOT NULL,
+	ZIP  INT(10) NOT NULL,
+    COUNTRY VARCHAR(50) NOT NULL
+  
+);
+
+--BUyers table--
+   
+   USE sharity;
+  
+CREATE TABLE Buyer (
+  userId INT NOT NULL,
+  nonProfitName VARCHAR(100) NOT NUll,
+  URL  VARCHAR(100),
+  taxNumber501C3 VARCHAR(20) not null,
+  missionStatement  VARCHAR(200) NOT NULL,
+  businessType VARCHAR(50)NOT NULL,
+  storageReqs VARCHAR(50) NOT NULL
+);
 
 
---put address input into one field--
+--table for inventory--
+USE sharity;
+   
+CREATE TABLE Inventory (
+  userId INT NOT NULL,
+ foodItemDescription VARCHAR(100) NOT NUll,
+  numberOfMeals  INTEGER (10),
+  poundsOfProduce  INTEGER (10),
+  poundsOfMeat  INTEGER (10),
+  poundsOfCheeseandOtherDairy  INTEGER (10),
+  poundsOfDryGoods  INTEGER (10),
+  numberOfDozenEggs INTEGER (10),
+  quartsOfLiquid  INTEGER (10),
+  dollarValue INTEGER (10) NOT NULL,
+  pickUpDate  VARCHAR(20) NOT NULL
+ 
+);
 
-USE SHARITY;
-SELECT * FROM VENDOR V
-INNER JOIN VENDORLOCATION VL
-ON V.ID = VL.VENDORID;
+--table for food request--
+USE sharity;
+   
+CREATE TABLE FoodRequest (
+  userId INT NOT NULL,
+ foodItemDescription VARCHAR(100) NOT NUll,
+  numberOfMeals  INTEGER (10),
+  poundsOfProduce  INTEGER (10),
+  poundsOfMeat  INTEGER (10),
+  poundsOfCheeseandOtherDairy  INTEGER (10),
+  poundsOfDryGoods  INTEGER (10),
+  numberOfDozenEggs INTEGER (10),
+  quartsOfLiquid  INTEGER (10),
+  dollarValue INTEGER (10) NOT NULL,
+  pickUpDate  VARCHAR(20) NOT NULL
+ 
+);
 
-USE SHARITY;
-SELECT CONCAT(`STREETADDRESS`,', ', `CITY`,', ',`STATE`,' ', `ZIP`) AS ADDRESS
-FROM VENDORLOCATION 
+
