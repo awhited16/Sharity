@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
+// import RegisterBusiness from "./components/RegisterBusiness";
+import Home from "./pages/home";
 import Footer from "./components/Footer";
-import RegisterBusiness from "./components/RegisterBusiness";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </Switch>
       </div>
       <div className="container-fluid">
-        <RegisterBusiness />
+        <Home />
       </div>
         <Footer />
     </Router>

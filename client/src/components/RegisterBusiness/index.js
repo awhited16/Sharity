@@ -6,7 +6,7 @@ function RegisterBusiness() {
         <div className="create_business_registration">
             <h1>Register Your Business</h1>
             <form>
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>
                         First Name:
                 <input type="text" name="fname" />
@@ -25,7 +25,7 @@ function RegisterBusiness() {
                         Title:
                     <input type="text" name="title" />
                     </label>
-                </div>
+                </div> */}
 
                 <div className="form-group">
                     <label>
@@ -35,7 +35,7 @@ function RegisterBusiness() {
                 </div>
 
 
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>
                         Phone Number:
                 <input type="text" name="phoneNumber" />
@@ -67,7 +67,8 @@ function RegisterBusiness() {
                         EIN:
                 <input type="text" name="ein" />
                     </label>
-                </div>
+                </div> */}
+                
                 <div className="form-group">
                     <label>
                         Password:
