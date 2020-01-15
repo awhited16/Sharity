@@ -51,7 +51,7 @@ CREATE TABLE LocationAddress (
    
    USE sharity;
   
-CREATE TABLE Buyer (
+CREATE TABLE nonProfit (
   userId INT NOT NULL,
   nonProfitName VARCHAR(100) NOT NUll,
   URL  VARCHAR(100),
