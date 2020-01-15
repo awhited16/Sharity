@@ -1,15 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Discover from "./pages/Discover";
-import About from "./pages/About";
-import Search from "./pages/Search";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav";
+// import RegisterBusiness from "./components/RegisterBusiness";
+import Home from "./pages/home";
 import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <div></div>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" />
+          <Route exact path="/pickups" />
+          <Route exact path="/about" />
+        </Switch>
+      </div>
+      <div className="container-fluid">
+        <Home />
+      </div>
+        <Footer />
+    </Router>
   );
 }
 
