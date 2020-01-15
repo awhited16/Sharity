@@ -58,15 +58,29 @@ function RegisterBusiness() {
 
                 <div className="form-group">
                     <label>
-                        Vendor ID:
-                    <input type="text" name="vendorID" />
+                        Business Tax ID(EIN or SS#):
+                    <input type="text" name="EIN" />
                     </label>
                 </div>
+                
                 <div className="form-group">
                     <label>
-                        EIN:
-                <input type="text" name="ein" />
+                        Business Tax ID(EIN or SS#):
+                    <input type="text" name="EIN" />
                     </label>
+                </div>
+                
+                <div className="form-group">
+                    <label>
+                        Type of Business:
+                    <input type="text" name="businessType" />
+                    </label>
+                        <select name="businessType">
+                            <option value="restaurant">Restaurant</option>
+                            <option value="caterer">Caterer</option>
+                            <option value="farmer">Farmer</option>
+                            <option value="event">Events</option>
+                        </select>
                 </div> */}
                 
                 <div className="form-group">
