@@ -6,7 +6,7 @@ function RegisterBusiness() {
         <div className="create_business_registration">
             <h1>Register Your Business</h1>
             <form>
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>
                         First Name:
                 <input type="text" name="fname" />
@@ -25,7 +25,7 @@ function RegisterBusiness() {
                         Title:
                     <input type="text" name="title" />
                     </label>
-                </div>
+                </div> */}
 
                 <div className="form-group">
                     <label>
@@ -35,7 +35,7 @@ function RegisterBusiness() {
                 </div>
 
 
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>
                         Phone Number:
                 <input type="text" name="phoneNumber" />
@@ -58,16 +58,31 @@ function RegisterBusiness() {
 
                 <div className="form-group">
                     <label>
-                        Vendor ID:
-                    <input type="text" name="vendorID" />
+                        Business Tax ID(EIN or SS#):
+                    <input type="text" name="EIN" />
                     </label>
                 </div>
+                
                 <div className="form-group">
                     <label>
-                        EIN:
-                <input type="text" name="ein" />
+                        Business Tax ID(EIN or SS#):
+                    <input type="text" name="EIN" />
                     </label>
                 </div>
+                
+                <div className="form-group">
+                    <label>
+                        Type of Business:
+                    <input type="text" name="businessType" />
+                    </label>
+                        <select name="businessType">
+                            <option value="restaurant">Restaurant</option>
+                            <option value="caterer">Caterer</option>
+                            <option value="farmer">Farmer</option>
+                            <option value="event">Events</option>
+                        </select>
+                </div> */}
+                
                 <div className="form-group">
                     <label>
                         Password:
