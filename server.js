@@ -1,8 +1,24 @@
 const express = require("express");
-// const routes = require("./routes");
+var cors = require('cors')
+var bodyParser = require('body-parser')
+
+
 const passport = require('passport');
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+
+app.use(bodyParser.json())
+app.use(cors())
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+)
+
+var Users = require('./routes/Users')
+
+app.use('/users', Users)
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -14,24 +30,6 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 // app.use(routes);
-
-var mysql      = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'root1234',
-  databse  : 'sharity_db'
-});
- 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
- 
-  console.log('connected as id ' + connection.threadId);
-});
 
 // Start the API server
 app.listen(PORT, function() {
