@@ -21,7 +21,9 @@ var Users = require('./routes/Users')
 app.use('/users', Users)
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
