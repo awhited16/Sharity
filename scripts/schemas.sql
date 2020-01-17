@@ -84,13 +84,7 @@ USE sharity;
 CREATE TABLE FoodRequest (
   userId INT NOT NULL,
  foodItemDescription VARCHAR(100) NOT NUll,
-  numberOfMeals  INTEGER (10),
-  poundsOfProduce  INTEGER (10),
-  poundsOfMeat  INTEGER (10),
-  poundsOfCheeseandOtherDairy  INTEGER (10),
-  poundsOfDryGoods  INTEGER (10),
-  numberOfDozenEggs INTEGER (10),
-  quartsOfLiquid  INTEGER (10),
+  amount VARCHAR(100) NOT NUll,
   dollarValue INTEGER (10) NOT NULL,
   pickUpDate  VARCHAR(20) NOT NULL
  
