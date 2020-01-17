@@ -11,6 +11,7 @@ if (process.env.JAWSDB_URL) {
         password: "root1234",
         database: "sharity_db"
     });
+    
 }
 
 connection.connect(function (err) {
