@@ -1,11 +1,11 @@
 const express = require("express");
 var cors = require('cors')
 var bodyParser = require('body-parser')
-
+var db = require('./models');
 
 const passport = require('passport');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001
 
 
 app.use(bodyParser.json())
@@ -32,6 +32,9 @@ if (process.env.NODE_ENV === "production") {
 // app.use(routes);
 
 // Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// 
+db.sequelize.sync( {force: true}  ).then(function() {
+  app.listen(PORT, function() {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  });
 });
