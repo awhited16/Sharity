@@ -1,16 +1,16 @@
 import React from "react";
 import DonationSubmissionForm from "../components/DonationSubmissionForm";
 
-function donations() {
+function donate() {
     return (
         <div>
             <Nav>
             </Nav>
-        </div>
-        <div>
-
+            <DonationSubmissionForm>
+                
+            </DonationSubmissionForm>
         </div>
     );
 };
 
-export default donations;
+export default donate;

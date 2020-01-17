@@ -13,6 +13,18 @@ function Nav() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
+              to="/donations"
+              className={
+                window.location.pathname === "/donations" || window.location.pathname === "/donations"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Donations
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
               to="/pick-ups"
               className={
                 window.location.pathname === "/" || window.location.pathname === "/about"
