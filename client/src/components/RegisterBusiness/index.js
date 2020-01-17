@@ -1,98 +1,78 @@
-import React from "react";
+import React, { Component } from 'react'
+import { register } from '../UserFunctions'
 
-function RegisterBusiness() {
+class Register extends Component {
+  constructor() {
+    super()
+    this.state = {
+      email: '',
+      password: '',
+      errors: {}
+    }
+
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+
+    console.log(this);
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+  onSubmit(e) {
+    e.preventDefault()
+
+    const newUser = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    register(newUser).then(res => {
+      this.props.history.push(`/login`)
+    })
+  }
+
+  render() {
     return (
-
-        <div className="create_business_registration">
-            <h1>Register Your Business</h1>
-            <form>
-                {/* <div className="form-group">
-                    <label>
-                        First Name:
-                <input type="text" name="fname" />
-                    </label>
-                </div>
-
-                <div className="form-group">
-                    <label>
-                        Last Name:
-                <input type="text" name="lname" />
-                    </label>
-                </div>
-
-                <div className="form-group">
-                    <label>
-                        Title:
-                    <input type="text" name="title" />
-                    </label>
-                </div> */}
-
-                <div className="form-group">
-                    <label>
-                        Email:
-                <input type="email" name="email" />
-                    </label>
-                </div>
-
-
-                {/* <div className="form-group">
-                    <label>
-                        Phone Number:
-                <input type="text" name="phoneNumber" />
-                    </label>
-                </div>
-
-                <div className="form-group">
-                    <label>
-                        Company Name:
-                <input type="text" name="companyName" />
-                    </label>
-                </div>
-
-                <div className="form-group">
-                    <label>
-                        Company Website:
-                     <input type="text" name="companyWebsite" />
-                    </label>
-                </div>
-
-                <div className="form-group">
-                    <label>
-                        Business Tax ID(EIN or SS#):
-                    <input type="text" name="EIN" />
-                    </label>
-                </div>
-                
-                <div className="form-group">
-                    <label>
-                        Business Tax ID(EIN or SS#):
-                    <input type="text" name="EIN" />
-                    </label>
-                </div>
-                
-                <div className="form-group">
-                    <label>
-                        Type of Business:
-                    <input type="text" name="businessType" />
-                    </label>
-                        <select name="businessType">
-                            <option value="restaurant">Restaurant</option>
-                            <option value="caterer">Caterer</option>
-                            <option value="farmer">Farmer</option>
-                            <option value="event">Events</option>
-                        </select>
-                </div> */}
-                
-                <div className="form-group">
-                    <label>
-                        Password:
-                <input type="password" name="lname" />
-                    </label>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form >
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 mt-5 mx-auto">
+            <form noValidate onSubmit={this.onSubmit}>
+              <h1 className="h3 mb-3 font-weight-normal">Register</h1>
+              <div className="form-group">
+                <label htmlFor="email">Email address</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                />
+              </div>
+              <button
+                type="submit"
+                className="btn btn-lg btn-primary btn-block"
+              >
+                Register!
+              </button>
+            </form>
+          </div>
         </div>
-    );
+      </div>
+    )
+  }
 }
-export default RegisterBusiness;
+
+export default Register
