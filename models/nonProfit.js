@@ -26,6 +26,15 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
 
+        businessTpe: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        foodStorageType: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+
 
     });
 

@@ -25,12 +25,31 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
 
-        dollarValue: {
+        pickUpDeadline: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        pickUpDeadline: {
+        vendorId: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
+
+
+        isActive: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        claimedBy: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        dollarValue: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        pickUpDate: {
             type: DataTypes.STRING,
             allowNull: false
         },
