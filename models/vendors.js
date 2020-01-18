@@ -25,11 +25,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
 
-
         businessType: {
             type: DataTypes.STRING,
             allowNull: false
         },
+        
         pickUpDeadLine: {
             type: DataTypes.STRING,
             allowNull: false

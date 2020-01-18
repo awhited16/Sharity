@@ -10,10 +10,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
 
-        amout: {
+        amount: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+
         otherComments: {
             type: DataTypes.STRING,
             allowNull: false
@@ -36,15 +37,16 @@ module.exports = function (sequelize, DataTypes) {
         },
 
 
-
         isActive: {
             type: DataTypes.STRING,
             allowNull: false
         },
+
         claimedBy: {
             type: DataTypes.STRING,
             allowNull: false
         },
+        
         dollarValue: {
             type: DataTypes.STRING,
             allowNull: false
@@ -52,7 +54,7 @@ module.exports = function (sequelize, DataTypes) {
         pickUpDate: {
             type: DataTypes.STRING,
             allowNull: false
-        },
+        }
 
 
 
