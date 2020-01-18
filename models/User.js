@@ -1,22 +1,19 @@
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 
 module.exports = function(sequelize, DataTypes) {
   var user = sequelize.define('user', {
     id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
     email: {
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     password: {
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     }
-  },
-  {
-    timestamps: false
-  })
+  });
   
   return user;
 }

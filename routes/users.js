@@ -1,11 +1,13 @@
 const express = require('express')
 const users = express.Router()
-const cors = require('cors')
+// const cors = require('cors')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+const Sequelize = require('sequelize');
 
-const User = require('../models')
-users.use(cors())
+
+const dbUser = require('../models')
+// users.use(cors())
 
 process.env.SECRET_KEY = 'secret'
 
@@ -18,7 +20,7 @@ users.post('/register', (req, res) => {
     created: today
   }
   console.log('this');
-  User.findOne({
+  dbUser.user.findOne({
     where: {
       email: req.body.email
     }
@@ -28,7 +30,7 @@ users.post('/register', (req, res) => {
       if (!user) {
         bcrypt.hash(req.body.password, 10, (err, hash) => {
           userData.password = hash
-          User.create(userData)
+          dbUser.user.create(userData)
             .then(user => {
               res.json({ status: user.email + 'Registered!' })
             })
@@ -47,7 +49,7 @@ users.post('/register', (req, res) => {
 })
 
 users.post('/login', (req, res) => {
-  User.findOne({
+  dbUser.user.findOne({
     where: {
       email: req.body.email
     }
@@ -72,7 +74,7 @@ users.post('/login', (req, res) => {
 users.get('/profile', (req, res) => {
   var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
-  User.findOne({
+  dbUser.user.findOne({
     where: {
       id: decoded.id
     }
