@@ -1,7 +1,7 @@
 
   --  create the database--
 
-CREATE  SHARITY;
+CREATE DATABASE SHARITY;
 
 
 --use database to create tables
@@ -34,7 +34,7 @@ CREATE TABLE vendor (
   email VARCHAR(50)NOT NULL,
   phone VARCHAR(20) NOT NULL,
   businessType VARCHAR(50)NOT NULL,
-preferedTime VARCHAR(50) 
+  preferedTime VARCHAR(50) 
 );
 
 
@@ -53,9 +53,9 @@ CREATE TABLE LocationAddress (
 
 --BUyers table--
    
-   USE sharity;
+USE sharity;
   
-CREATE TABLE nonProfi
+CREATE TABLE nonProfit (
   userId INT NOT NULL,
   nonProfitName VARCHAR(100) NOT NUll,
   website  VARCHAR(100),
@@ -71,18 +71,17 @@ USE sharity;
    
 CREATE TABLE Inventory (
   Id INT NOT NULL,
- foodItemDescription VARCHAR(100) NOT NUll,
- amount VARCHAR(100) NOT NUll,
- donationComments VARCHAR(100) NOT NUll,
- storageReqs VARCHAR(100) NOT NUll,
-   pickUpDeadline  VARCHAR(20) NOT NULL
+  foodItemDescription VARCHAR(100) NOT NUll,
+  amount VARCHAR(100) NOT NUll,
+  donationComments VARCHAR(100),
+  storageReqs VARCHAR(100) NOT NUll,
+  pickUpDeadline  VARCHAR(20) NOT NULL,
   vendorId VARCHAR(100) NOT NUll,
   isActive VARCHAR(100) NOT NUll,
-  isClaimed VARCHAR(100) NOT NUll,
-  claimedBy VARCHAR(100) NOT NUll,
-  dollarValue INTEGER (10) NOT NULL,
+  isClaimed VARCHAR(100) DEFAULT 'false' NOT NUll,
+  claimedBy VARCHAR(100),
+  dollarValue INTEGER (10),
   pickUpDate  VARCHAR(20) NOT NULL
- 
 );
 
 
