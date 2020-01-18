@@ -38,8 +38,19 @@ module.exports = function(app) {
         });
     });
 
+    // get request to retrieve single donation submission
+    router.get("api/inventory/:id", function(req, res) {
+        db.inventory.findOne({
+            where: {
+                id:req.params.id
+            }
+        }).then(function(inventory) {
+            res.json(inventory);
+        });
+    });
+
     // get request to pull information for specific NP's pickups
-    router.get('/api/pickups', function(req, res) {
+    router.get('/api/inventory/pickups', function(req, res) {
         db.inventory.findOne({
             where: {
                 isClaimed: true,
@@ -57,7 +68,7 @@ module.exports = function(app) {
 
 
     // get request to pull information for specific donor's pickups
-    router.get('/api/pickups', function(req, res) {
+    router.get('/api/inventory/pickups', function(req, res) {
         db.inventory.findOne({
             where: {
                 isClaimed: true,
