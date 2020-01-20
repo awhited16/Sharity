@@ -16,7 +16,7 @@ app.use(
   })
 )
 
-var Users = require('./routes/Users')
+var Users = require('./routes/users')
 
 app.use('/users', Users)
 

@@ -61,6 +61,11 @@ class Register extends Component {
                   onChange={this.onChange}
                 />
               </div>
+              <div className="client-switch">
+                <input type="radio" name="client" value="client"/> Non-Profit
+                <input type="radio" name="client" value="resteraunt"/> Restaurant
+              </div>
+
               <button
                 type="submit"
                 className="btn btn-lg btn-primary btn-block"

@@ -2,6 +2,7 @@ const express = require('express')
 const users = express.Router()
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+
 const dbUser = require('../models')
 
 process.env.SECRET_KEY = 'secret'
