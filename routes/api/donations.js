@@ -22,7 +22,6 @@ module.exports = function(app) {
         });
     });
 
-
     // get request to pull all available donations
     router.get('/api/inventory', function(req, res) {
         db.inventory.findOne({

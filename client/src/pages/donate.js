@@ -85,7 +85,7 @@ class donate extends Component {
                     placeholder="Any comments about this donation?"
                 />
                 <FormBtn
-                    disabled={!(this.state.foodItemDescription && this.state.amount && this.state.pickUpDeadline)}
+                    // disabled={!(this.state.foodItemDescription && this.state.amount && this.state.pickUpDeadline)}
                     onClick={this.donateFormSubmit}
                 >
                     Submit Donation
