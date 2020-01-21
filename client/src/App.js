@@ -9,6 +9,7 @@ import Profile from './components/Profile'
 import RegisterUser from './components/registerUser'
 import DonationSubmissionForm from "./components/DonationSubmissionForm";
 import AvailableDonations from "./pages/AvailableDonations";
+import donate from "./pages/donate";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route exact path="/about" />
           <Route exact path="/register" component={RegisterUser} />
           <Route exact path="/donations" component={AvailableDonations}/>
-          <Route exact path="/donate" component={DonationSubmissionForm}/>
+          <Route exact path="/donate" component={donate}/>
         </Switch>
       </div>
       <div className="container-fluid">
