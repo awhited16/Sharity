@@ -4,8 +4,7 @@ import CreateAccountButton from "../components/CreateAccountButton";
 
 function Home() {
     return (
-        <div className="create_business_registration">
-            <h1>Welcome</h1>
+        <div className="container create_business_registration">
             <Login />
             <CreateAccountButton/>
         </div>

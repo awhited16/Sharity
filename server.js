@@ -33,6 +33,8 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 // app.use(routes);
 
+app.use(express.static(__dirname + '/public/'));
+
 // Start the API server
 // 
 db.sequelize.sync( {force: true}  ).then(function() {
