@@ -1,4 +1,6 @@
-function registerBusiness() {
+import React from "react";
+
+function VendorSignUp() {
  return (
         <div className="create_business_registration">
             <div className="card-header bg-primary text-white">
@@ -77,13 +79,13 @@ function registerBusiness() {
                <div>
                    What catagory of food will you be donating?
                    
-                    <input type="checkbox" id="produce" name="produce"><label for="produce">Produce</label></input>
-                    <input type="checkbox" id="dairy" name="dairy"><label for="dairy">Dairy</label></input>
-                    <input type="checkbox" id="meat" name="meat"><label for="meat">Meat</label></input>
-                    <input type="checkbox" id="grain" name="grain"><label for="grain">Grain</label></input>
-                    <input type="checkbox" id="cannedItems" name="cannedItems"><label for="cannedItems">Canned Items</label></input>
-                    <input type="checkbox" id="boxedItems" name="boxedItems"><label for="boxedItems">Boxed Items</label></input>
-                    <input type="checkbox" id="other" name="other"><label for="other">Other</label></input>
+                    <input type="checkbox" id="produce" name="produce"/>
+                    <input type="checkbox" id="dairy" name="dairy"/>
+                    <input type="checkbox" id="meat" name="meat"/>
+                    <input type="checkbox" id="grain" name="grain"/>
+                    <input type="checkbox" id="cannedItems" name="cannedItems"/>
+                    <input type="checkbox" id="boxedItems" name="boxedItems"/>
+                    <input type="checkbox" id="other" name="other"/>
                </div>
 
                <label>
@@ -108,5 +110,5 @@ function registerBusiness() {
 }
 
   
-  export default Form;
+  export default VendorSignUp;
       

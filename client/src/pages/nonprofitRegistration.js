@@ -1,12 +1,13 @@
 import React from "react";
 
-function nonprofitRegistration() {
+import NonprofitSignUp from "../components/NonprofitSignUp";
+
+function NonprofitRegistration() {
     return (
         <div>
-            <Nav>
-            </Nav>
+           <NonprofitSignUp />
         </div>
     );
 };
 
-export default nonprofitRegistration;
+export default NonprofitRegistration;

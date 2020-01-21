@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Input, TextArea, Select, FormBtn } from "../components/DonationSubmissionForm";
 
-class donate extends Component {
+class SubmitDonation extends Component {
     state = {
         foodItemDescription: "",
         amount: "",
@@ -96,4 +96,4 @@ class donate extends Component {
 
 };
 
-export default donate;
+export default SubmitDonation;

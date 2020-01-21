@@ -1,6 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-function registerClient() {
+import React from "./node_modules/react";
+import { Link } from "./node_modules/react-router-dom";
+
+function RegisterClient() {
 	return (
 		<select>
 			<option value="AL">Alabama</option>
@@ -59,4 +60,4 @@ function registerClient() {
 	);
 }
 
-export default registerClient;
+export default RegisterClient;

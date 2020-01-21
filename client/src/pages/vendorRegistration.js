@@ -1,12 +1,13 @@
 import React from "react";
 
-function vendorRegistration() {
+import VendorSignUp from "../components/VendorSignUp";
+
+function VendorRegistration() {
     return (
         <div>
-            <Nav>
-            </Nav>
+            <VendorSignUp />
         </div>
     );
 };
 
-export default vendorRegistration;
+export default VendorRegistration;

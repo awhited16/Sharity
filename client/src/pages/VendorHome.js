@@ -1,12 +1,14 @@
 import React from "react";
 
-function pickups() {
+import Nav from "./../components/Nav";
+
+function VendorHome() {
     return (
         <div>
             <Nav>
+                
             </Nav>
         </div>
     );
-};
-
-export default pickups;
+}
+export default VendorHome;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-function modal(props) {
+function Modal(props) {
     return (
         <div>
             <div>
@@ -9,4 +9,4 @@ function modal(props) {
         </div>
     );
 }
-export default modal;
+export default Modal;

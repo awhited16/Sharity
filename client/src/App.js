@@ -1,15 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/Nav";
-// import Home from "./pages/home";
-import Footer from "./components/Footer";
-import Landing from './components/Landing'
-// import Login from './components/Login'
-import RegisterBusiness from './components/RegisterBusiness'
-// import DonationSubmissionForm from "./components/DonationSubmissionForm";
-import AvailableDonations from "./pages/AvailableDonations";
-import donate from "./pages/donate";
 
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+
+import Landing from './pages/Landing';
+import AvailableDonations from "./pages/AvailableDonations";
+import NonprofitRegistration from "./pages/NonprofitRegistration";
+import Pickups from "./pages/Pickups";
+import About from "./pages/About";
+import VendorRegistration from "./pages/VendorRegistration";
+import SubmitDonation from "./pages/SubmitDonation";
+import VendorHome from "./pages/VendorHome";
+import NonprofitHome from "./pages/NonprofitHome";
+import SignIn from "./pages/SignIn";
+import UserRegistration from "./pages/UserRegistration";
 
 function App() {
   return (
@@ -18,11 +23,16 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/pickups" />
-          <Route exact path="/about" />
-          <Route exact path="/register" component={RegisterBusiness} />
+          <Route exact path="/sign-in" component={SignIn} />
+          <Route exact path="/register-vendor" component={VendorRegistration} />
+          <Route exact path="/register-nonprofit" component={NonprofitRegistration}/>
+          <Route exact path="/vendor-home" component={VendorHome}/>
+          <Route exact path="/nonprofit-home" component={NonprofitHome}/>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/pickups" component={Pickups} />
           <Route exact path="/donations" component={AvailableDonations}/>
-          <Route exact path="/donate" component={donate}/>
+          <Route exact path="/submit-donations" component={SubmitDonation}/>
+          <Route exact path="/user-registration" component={UserRegistration}/>
         </Switch>
       </div>
       <div className="container-fluid">

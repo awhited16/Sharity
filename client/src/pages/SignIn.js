@@ -1,8 +1,9 @@
 import React from "react";
+
 import Login from "../components/Login";
 import CreateAccountButton from "../components/CreateAccountButton";
 
-function Home() {
+function SignIn() {
     return (
         <div className="create_business_registration">
             <h1>Welcome</h1>
@@ -11,4 +12,4 @@ function Home() {
         </div>
     );
 }
-export default Home;
+export default SignIn;
