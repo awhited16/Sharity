@@ -11,7 +11,7 @@ import Landing from './components/Landing'
 import RegisterBusiness from './components/RegisterBusiness'
 import DonationSubmissionForm from "./components/DonationSubmissionForm";
 import AvailableDonations from "./pages/AvailableDonations";
-
+import Pickups from "./pages/picksup"
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/pickups" />
+          <Route exact path="/pick-ups" component={Pickups}/>
           <Route exact path="/about" />
           <Route exact path="/register" component={RegisterBusiness} />
           <Route exact path="/donations" component={AvailableDonations}/>

@@ -2,48 +2,48 @@ const Sequelize = require('sequelize');
 
 module.exports = function (sequelize, DataTypes) {
     var user = sequelize.define('user', {
-                id: {
-                    type: Sequelize.INTEGER,
-                    primaryKey: true,
-                    autoIncrement: true
-                },
-                email: {
-                    type: Sequelize.STRING
-                },
-                password: {
-                    type: Sequelize.STRING
-                },
+        id: {
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        email: {
+            type: Sequelize.STRING
+        },
+        password: {
+            type: Sequelize.STRING
+        },
 
-                firstName: {
-                    type: Sequelize.STRING
-                },
-                lastname: {
-                    type: Sequelize.STRING
-                },
-                title: {
-                    type: Sequelize.STRING
-                },
+        // firstName: {
+        //     type: Sequelize.STRING
+        // },
 
-                phone: {
-                    type: Sequelize.STRING
-                },
-                locationId: {
-                    type: Sequelize.STRING
-                },
+        // lastname: {
+        //     type: Sequelize.STRING
+        // },
+        // title: {
+        //     type: Sequelize.STRING
+        // },
 
-                vendorId: {
-                    type: Sequelize.STRING
-                },
+        // phone: {
+        //     type: Sequelize.STRING
+        // },
+        // locationId: {
+        //     type: Sequelize.STRING
+        // },
 
-                nonProfitId: {
-                    type: Sequelize.STRING
-                },
-            },
+        // vendorId: {
+        //     type: Sequelize.STRING
+        // },
 
-            {
-                timestamps: false
-            }),
+        // nonProfitId: {
+        //     type: Sequelize.STRING
+        // },
+
+        timestamps: false
+
+    });
 
 
-        return user;
+    return user;
 }

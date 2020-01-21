@@ -1,5 +1,5 @@
 // bcrypt used for password hashing. use bcryptjs version as the regular bcrypt module can cause errors on Windows machines
-var bcrypt = require("bcryptjs");
+// var bcrypt = require("bcryptjs");
 // create User model
 module.exports = function (sequelize, DataTypes) {
     var Address = sequelize.define("Address", {
@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        
+
         State: {
             type: DataTypes.STRING,
             allowNull: false
