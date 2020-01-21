@@ -3,12 +3,21 @@ import Login from "../components/Login";
 import CreateAccountButton from "../components/CreateAccountButton";
 
 function Home() {
-    return (
-        <div className="create_business_registration">
-            <h1>Welcome</h1>
-            <Login />
-            <CreateAccountButton/>
-        </div>
+    return(
+    <div className="container create_business_registration" >
+        <Login / >
+        <CreateAccountButton / >
+        <div className = "container" >
+        <div className = "jumbotron mt-5" >
+        <div className = "col-sm-8 mx-auto" >
+        <h1 className = "text-center" > Welcome to Sharity </h1> < p >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p> <p >
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p> <p >
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p> 
+         </div >
+                </div>
+            </div >
+            </div>
     );
 }
 export default Home;

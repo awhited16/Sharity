@@ -1,13 +1,14 @@
 import React from "react";
-import DonationSubmissionForm from "../components/DonationSubmissionForm";
 
 function donations() {
-    return ( 
-         < div >
-             <Nav >
-             </Nav> </div>
 
-    );
+        return (
+            <div>
+                
+    
+            </div>
+        );
+
 };
 
 export default donations;
