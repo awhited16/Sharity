@@ -1,7 +1,8 @@
 import React from "react";
 
-function NonprofitSignUp() {
-    return (
+class NonprofitSignUp extends React.Component {
+    render() {
+        return (
             <div className="create_business_registration">
                <div className="card-header bg-primary text-white">
             <h1><strong>Create account</strong></h1>
@@ -83,6 +84,6 @@ function NonprofitSignUp() {
          );
        
    }
-   
+}
      
-     export default NonprofitSignUp;
+export default NonprofitSignUp;

@@ -16,7 +16,7 @@ app.use(
   })
 )
 
-var Users = require('./routes/Users')
+var Users = require('./routes/users')
 
 app.use('/users', Users)
 
@@ -32,6 +32,8 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 // app.use(routes);
+
+app.use(express.static(__dirname + '/public/'));
 
 // Start the API server
 // 

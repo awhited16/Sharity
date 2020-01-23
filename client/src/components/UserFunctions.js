@@ -25,6 +25,7 @@ export const login = user => {
       return response.data
     })
     .catch(err => {
+      console.log("Your username or password was not correct");
       console.log(err)
     })
 }

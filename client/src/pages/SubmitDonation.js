@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+
 import axios from "axios";
-import { Input, TextArea, Select, FormBtn } from "../components/DonationSubmissionForm";
+import Input from "../components/Input"; 
+import TextArea from "../components/TextArea";
+import Select from "../components/Select";
+import FormBtn from "../components/FormBtn"; 
 
 class SubmitDonation extends Component {
     state = {
@@ -38,7 +42,6 @@ class SubmitDonation extends Component {
             console.log(error);
         });
     };
-
 
     render() {
         return (

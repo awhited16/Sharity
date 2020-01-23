@@ -1,8 +1,6 @@
 import React from "react";
-
-function RegisterClient() {
+function RegisterBusiness() {
 	return (
-		<React.Fragment>
 		<select>
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
@@ -56,12 +54,7 @@ function RegisterClient() {
 			<option value="WI">Wisconsin</option>
 			<option value="WY">Wyoming</option>
 		</select>
-		
-		
-			<input type="text" className="form-control" name="test" placeholder="Test" />
-		</React.Fragment>
-		
 	);
 }
 
-export default RegisterClient;
+export default RegisterBusiness;
