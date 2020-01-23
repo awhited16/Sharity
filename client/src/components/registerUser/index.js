@@ -3,7 +3,7 @@ import { register } from '../UserFunctions'
 import RegisterBusiness from '../RegisterBusiness'
 import RegisterClient from '../RegisterClient'
 
-class Register extends Component {
+class RegisterUser extends Component {
   constructor() {
     super()
     this.state = {
@@ -106,4 +106,4 @@ class Register extends Component {
   }
 }
 
-export default Register
+export default RegisterUser;

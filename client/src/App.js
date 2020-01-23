@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Landing from './components/Landing'
 import Login from './components/Login'
 import Profile from './components/Profile'
-import RegisterUser from './components/registerUser'
+import RegisterUser from './components/RegisterUser'
 import DonationSubmissionForm from "./components/DonationSubmissionForm";
 import AvailableDonations from "./pages/AvailableDonations";
 
