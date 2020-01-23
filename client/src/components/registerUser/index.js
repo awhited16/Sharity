@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from './node_modules/react'
 import { register } from '../UserFunctions'
 import RegisterBusiness from '../RegisterBusiness'
 import RegisterClient from '../RegisterClient'

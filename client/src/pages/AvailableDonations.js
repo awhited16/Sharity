@@ -5,8 +5,6 @@ import Card from "../components/Card/index";
 function AvailableDonations() {
     return (
         <div>
-            <Nav>
-            </Nav>
             <Card>
             </Card>
         </div>
