@@ -14,7 +14,10 @@ import SubmitDonation from "./pages/SubmitDonation";
 import VendorHome from "./pages/VendorHome";
 import NonprofitHome from "./pages/NonprofitHome";
 import SignIn from "./pages/SignIn";
+
 import UserRegistration from "./pages/UserRegistration";
+
+import RegisterUser from "./components/RegisterUser";
 
 function App() {
   return (
@@ -33,6 +36,8 @@ function App() {
           <Route exact path="/donations" component={AvailableDonations}/>
           <Route exact path="/submit-donations" component={SubmitDonation}/>
           <Route exact path="/user-registration" component={UserRegistration}/>
+          {/* bad naming */}
+          <Route exact path="/register-user" component={RegisterUser}/>
         </Switch>
       </div>
       <div className="container-fluid">

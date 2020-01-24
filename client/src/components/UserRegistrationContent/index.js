@@ -41,20 +41,20 @@ class UserRegistrationContent extends Component {
             <form noValidate onSubmit={this.onSubmit}>
               <h1 className="h3 mb-3 font-weight-normal">New to Sharity?</h1>
               <p>To best serve you, please select the appropriate user account below!</p>
-              <Link to="/register-nonprofit">
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-block"
-              >
-               I'm a Non-Profit
-              </button>
-              </Link>
-              <Link to="/register-vendor">
-              <button
+              <Link to="/register-user">
+              <button 
                 type="submit"
                 className="btn btn-lg btn-primary btn-block"
               >
                I'm a Restaurant
+              </button>
+              </Link>
+              <Link to="/register-nonprofit">
+              <button disabled
+                type="submit"
+                className="btn btn-lg btn-primary btn-block"
+              >
+               I'm a Non-Profit
               </button>
               </Link>
             </form>

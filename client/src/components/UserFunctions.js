@@ -6,8 +6,9 @@ export const register = newUser => {
     .post('users/register', {
       email: newUser.email,
       password: newUser.password
+      
     })
-    .then(response => {
+    .then(_response => {
       console.log('Registered')
     }).catch(error => {
       console.log(error.response)
