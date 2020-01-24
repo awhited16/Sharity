@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { register } from '../UserFunctions'
 import RegisterBusiness from '../RegisterBusiness'
-import RegisterClient from '../RegisterClient'
+import RegisterClient from '../registerClient/index'
 
 class Register extends Component {
   constructor() {

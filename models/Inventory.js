@@ -7,51 +7,49 @@ module.exports = function (sequelize, DataTypes) {
         //user ID how do I use
         foodItemDescription: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true
         },
 
-        amout: {
+        amount: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true
         },
         otherComments: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
 
-        storageRequirements: {
+        storageReqs: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
         pickUpDeadline: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
         vendorId: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-
-
 
         isActive: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         claimedBy: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         dollarValue: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         pickUpDate: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
 

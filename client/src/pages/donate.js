@@ -21,6 +21,13 @@ class donate extends Component {
     };
 
     donateFormSubmit = event => {
+        console.log(this.state.amount);
+        console.log(this.state.foodItemDescription);
+        console.log(this.state.donationComments);
+        console.log(this.state.storageReqs);
+        console.log(this.state.pickUpDeadline);
+        console.log(this.state.dollarValue);
+        console.log(this.state.isClaimed);
         event.preventDefault();
         axios.post('/api/inventory', {
             foodItemDescription: this.state.foodItemDescription,
@@ -44,11 +51,9 @@ class donate extends Component {
         return (
             <form>
                 <Input
-                    type="text"
-                    label="Food Item Description"
                     defaultValue={this.state.foodItemDescription}
                     onChange={this.handleInputChange}
-                    name="Food Item Description"
+                    name="foodItemDescription"
                     placeholder="Food Item Description"
                 />
                 <Input
@@ -60,14 +65,14 @@ class donate extends Component {
                 <Select
                     defaultValue={this.state.storageReqs}
                     onChange={this.handleInputChange}
-                    name="Storage Requirements"
+                    name="storageReqs"
                     placeholder="Storage Requirements"
                 />
                 <Input
                     type="date"
                     defaultValue={this.state.pickUpDeadline}
                     onChange={this.handleInputChange}
-                    name="Pick Up Deadline"
+                    name="pickUpDeadline"
                     placeholder="Pick Up Deadline"
                 />
                 <Input
@@ -75,13 +80,13 @@ class donate extends Component {
                     pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
                     defaultValue={this.state.dollarValue}
                     onChange={this.handleInputChange}
-                    name="Dollar Value"
+                    name="dollarValue"
                     placeholder="Dollar Value"
                 />
                 <TextArea
                     defaultValue={this.state.donationComments}
                     onChange={this.handleInputChange}
-                    name="Donation Comments"
+                    name="donationComments"
                     placeholder="Any comments about this donation?"
                 />
                 <FormBtn

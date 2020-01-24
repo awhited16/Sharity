@@ -34,7 +34,7 @@ CREATE TABLE vendor (
   email VARCHAR(50)NOT NULL,
   phone VARCHAR(20) NOT NULL,
   businessType VARCHAR(50)NOT NULL,
-  preferedTime VARCHAR(50) 
+  preferredTime VARCHAR(50) 
 );
 
 
@@ -71,17 +71,17 @@ USE sharity;
    
 CREATE TABLE Inventory (
   Id INT NOT NULL,
-  foodItemDescription VARCHAR(100) NOT NUll,
-  amount VARCHAR(100) NOT NUll,
+  foodItemDescription VARCHAR(100),
+  amount VARCHAR(100),
   donationComments VARCHAR(100),
-  storageReqs VARCHAR(100) NOT NUll,
-  pickUpDeadline  VARCHAR(20) NOT NULL,
-  vendorId VARCHAR(100) NOT NUll,
-  isActive VARCHAR(100) NOT NUll,
+  storageReqs VARCHAR(100),
+  pickUpDeadline  VARCHAR(20),
+  vendorId VARCHAR(100),
+  isActive VARCHAR(100),
   isClaimed VARCHAR(100) DEFAULT 'false' NOT NUll,
   claimedBy VARCHAR(100),
   dollarValue INTEGER (10),
-  pickUpDate  VARCHAR(20) NOT NULL
+  pickUpDate  VARCHAR(20)
 );
 
 
