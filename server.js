@@ -17,8 +17,10 @@ app.use(
 )
 
 var Users = require('./routes/users')
+var Donations = require('./routes/api/donations')
 
 app.use('/users', Users)
+app.use('/api', Donations)
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -31,7 +33,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-// app.use(routes);
 
 app.use(express.static(__dirname + '/public/'));
 
