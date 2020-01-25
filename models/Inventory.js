@@ -14,11 +14,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        otherComments: {
+        
+        donationComments: {
             type: DataTypes.STRING,
             allowNull: true
         },
-
 
         storageReqs: {
             type: DataTypes.STRING,
@@ -35,18 +35,22 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true
         },
 
-        isActive: {
+        isClaimed: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: true,
+            default: false
         },
+
         claimedBy: {
             type: DataTypes.STRING,
             allowNull: true
         },
+
         dollarValue: {
             type: DataTypes.STRING,
             allowNull: true
         },
+
         pickUpDate: {
             type: DataTypes.STRING,
             allowNull: true

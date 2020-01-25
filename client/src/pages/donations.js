@@ -4,8 +4,8 @@ function donations() {
 
         return (
             <div>
-                <Nav>
-                </Nav>
+
+
             </div>
         );
 

@@ -77,7 +77,6 @@ CREATE TABLE Inventory (
   storageReqs VARCHAR(100) NOT NUll,
   pickUpDeadline  VARCHAR(20) NOT NULL,
   vendorId VARCHAR(100) NOT NUll,
-  isActive VARCHAR(100) NOT NUll,
   isClaimed VARCHAR(100) DEFAULT 'false' NOT NUll,
   claimedBy VARCHAR(100),
   dollarValue INTEGER (10),
